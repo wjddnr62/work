@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dev.pdf.work">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/main_icon"
+        android:label="일하다"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".Splash"
+            android:theme="@style/Theme.Design.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Login.LoginActivity"
+            android:theme="@style/Theme.Design.NoActionBar"/>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".Login.Sign1Activity"/>
+        <activity android:name=".Login.EmSign2Activity"/>
+        <activity android:name=".Login.BuSign2Activity"/>
+        <activity android:name=".Scene.SceneListActivity"/>
+        <activity android:name=".Scene.DetailInfoActivity"/>
+        <activity android:name=".Buisnessman.BuisnessMainActivity"/>
+        <activity android:name=".Buisnessman.SceneRegiPicturesActivity"/>
+        <activity android:name=".Buisnessman.SceneRegiActivity"/>
+        <activity android:name=".Scene.JobLog_ListActivity"/>
+        <activity android:name=".Scene.Job_Eval_Activity"/>
+        <activity android:name=".Buisnessman.SceneEvalActivity"/>
+        <activity android:name=".Buisnessman.SceneRegi2Activity"/>
+        <activity android:name=".Buisnessman.Scene_Apply"/>
+    </application>
+
+</manifest>

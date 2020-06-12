@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/custom_toolbar"
+        android:id="@+id/toolbar"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/top_layout"
+        android:layout_below="@id/toolbar">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+<!--            <ImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="5"-->
+<!--                android:src="@drawable/icon_pickax" />-->
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="현장"
+                android:textSize="14dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/mainColor"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@id/top_layout"
+        android:orientation="horizontal"
+        android:id="@+id/img_layout"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/prev"
+            android:src="@drawable/prev_img"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".4"
+            android:id="@+id/imgs"
+            android:background="@drawable/black_border_textview"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/next"
+            android:src="@drawable/next_img"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/img_layout"
+        android:id="@+id/info_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                style="@style/detailInfoTextView"
+                android:text="장소"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/location"
+                style="@style/detailInfoTextView"
+                android:text=""
+                android:layout_weight=".4"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                style="@style/detailInfoTextView"
+                android:text="공사기간"
+                android:layout_weight="1"/>
+            <TextView
+                android:id="@+id/during_work"
+                style="@style/detailInfoTextView"
+                android:layout_weight=".4"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <TextView
+                style="@style/detailInfoTextView"
+                android:text="작업희망일"
+                android:layout_weight="1"/>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_weight=".4">
+               <TextView
+                   style="@style/detailInfoTextView"
+                   android:id="@+id/job_day"
+                   android:layout_weight="1"/>
+               <TextView
+                   style="@style/detailInfoTextView"
+                   android:text="희망직종"
+                   android:layout_weight="1"/>
+               <TextView
+                   style="@style/detailInfoTextView"
+                   android:id="@+id/job_kind"
+                   android:layout_weight=".9"/>
+           </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".5">
+            <TextView
+                android:id="@+id/recruitment_contents"
+                style="@style/detailInfoTextView"
+                android:paddingTop="10dp"
+                android:text="모집내용"
+                android:gravity="start"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".9"
+            android:id="@+id/regi_form">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <Button
+                android:onClick="regi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="신청하기"
+                android:background="@color/mainColor"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:layout_weight=".3"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/regi"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".9"
+            android:id="@+id/deadline_form">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+            <Button
+                android:onClick="deadline"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="마감하기"
+                android:background="@color/mainColor"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:layout_weight=".3"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:id="@+id/deadline"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:id="@+id/loading"
+        android:visibility="gone"/>
+</RelativeLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="match_parent">
+
+    <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:scaleType="fitXY"-->
+        <!--android:adjustViewBounds="true"-->
+        <!--android:src="@drawable/work_3" />-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:src="@drawable/logo"
+        android:layout_marginTop="35dp"
+        android:id="@+id/logo"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/logo"
+        android:id="@+id/app"
+        android:text="일하다"
+        android:textColor="@color/mainColor"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+
+    <LinearLayout
+        android:id="@+id/login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/app">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight=".5"
+            android:layout_marginTop="50dp">
+
+            <EditText
+                style="@style/loginEdit"
+                android:hint="아이디"
+                android:textColor="#000"
+                android:id="@+id/login_id"
+                android:layout_marginBottom="5dp"
+                android:textColorHint="#707070"
+                android:inputType="text"
+                android:background="#ebebeb"/>
+            <EditText
+                android:id="@+id/login_pw"
+                android:textColor="#000"
+                style="@style/loginEdit"
+                android:textColorHint="#707070"
+                android:hint="비밀번호"
+                android:inputType="textPassword"
+                android:background="#ebebeb"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+                <Button
+                    style="@style/loginBtn"
+                    android:text="로그인"
+                    android:id="@+id/login_btn"
+                    android:background="@color/mainColor"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"/>
+                <Button
+                    style="@style/loginBtn"
+                    android:text="근로자 회원가입"
+                    android:id="@+id/sign_em"
+                    android:textColor="#000"
+                    android:background="@drawable/black_border_textview"
+                    android:layout_marginBottom="10dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"/>
+                <Button
+                    android:layout_marginTop="10dp"
+                    style="@style/loginBtn"
+                    android:text="사업자 회원가입"
+                    android:textColor="#000"
+                    android:id="@+id/sign_bu"
+                    android:background="@drawable/black_border_textview"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="10dp"
+                    android:textColor="#000"
+                    android:text="아이디 또는 비밀번호가 기억나지 않으세요?"
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#000"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#000"
+                    android:textSize="10dp"
+                    android:text="아이디/비밀번호 찾기"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:id="@+id/loading"
+        android:visibility="gone"/>
+</RelativeLayout>

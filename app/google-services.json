@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "577264311515",
+    "firebase_url": "https://work-290da.firebaseio.com",
+    "project_id": "work-290da",
+    "storage_bucket": "work-290da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:577264311515:android:1c6b8c24bbc8631c",
+        "android_client_info": {
+          "package_name": "com.dev.pdf.work"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "577264311515-5r5foe8qu9nktqeko3e9g129iq3aesop.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFkln-sPOrP-5GP2E9DZy4bDPv-4wZLWk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

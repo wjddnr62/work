@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/custom_toolbar"
+        android:id="@+id/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:layout_below="@id/toolbar">
+
+            <TextView
+                style="@style/signTextView"
+                android:layout_marginBottom="5dp"
+                android:text="2. 이력서 작성" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/mainColor" />
+
+            <TextView
+                style="@style/signTextView"
+                android:text="직종 선택"
+                android:layout_marginBottom="5dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/magazine"
+                    style="@style/signTextView"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/textview_selector"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:text="잡부"
+                    android:textColor="@drawable/textview_selector_text" />
+
+                <TextView
+                    android:id="@+id/tidal_Ball"
+                    style="@style/signTextView"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/textview_selector"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:text="조력공"
+                    android:textColor="@drawable/textview_selector_text" />
+
+                <TextView
+                    android:id="@+id/technician"
+                    style="@style/signTextView"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/textview_selector"
+                    android:paddingBottom="8dp"
+                    android:gravity="center"
+                    android:paddingTop="8dp"
+                    android:text="기술공"
+                    android:textColor="@drawable/textview_selector_text" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/signTextView"
+                android:text="현장 근무 경력"
+                android:layout_marginBottom="5dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <Spinner
+                    android:id="@+id/career_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:entries="@array/career"
+                    android:textAlignment="textEnd"
+                    android:layout_gravity="end"
+                    android:layout_weight="1">
+
+                </Spinner>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+
+
+            <TextView
+                style="@style/signTextView"
+                android:text="근무 숙련도"
+                android:layout_marginBottom="5dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <Spinner
+                    android:id="@+id/proficiency_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:entries="@array/proficiency"
+                    android:layout_weight="1"
+                    android:textAlignment="textEnd"
+                    android:layout_gravity="end">
+
+                </Spinner>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <TextView
+                style="@style/signTextView"
+                android:text="자기 소개서"
+                android:layout_marginBottom="5dp"/>
+
+
+            <EditText
+                android:id="@+id/my_info"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="20dp"
+                android:inputType="none"
+                android:background="@drawable/edit_text_gray_border_white_background"
+                android:padding="10dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/mainColor" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/mainColor">
+
+        <TextView
+            android:onClick="backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="이전 단계"
+            android:textColor="#fff"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:onClick="signOk"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:text="가입 완료"
+            android:textColor="#fff"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

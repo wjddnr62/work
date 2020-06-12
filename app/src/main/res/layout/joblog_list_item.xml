@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="horizontal"
+    android:weightSum="4">
+    <TextView
+        android:id="@+id/area"
+        style="@style/sceneListTextView"
+        android:textColor="#ff0000"
+        android:layout_weight="1.1"/>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#717171"/>
+
+    <TextView
+        android:id="@+id/location"
+        style="@style/sceneListTextView"
+        android:layout_weight=".7"/>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#717171"/>
+
+    <TextView
+        android:id="@+id/status"
+        style="@style/sceneListTextView"
+        android:layout_weight="1.1"/>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#717171"/>
+
+    <TextView
+        android:id="@+id/evaluation"
+        style="@style/sceneListTextView"
+        android:textColor="#ffc800"
+        android:layout_weight="1.1"/>
+
+</LinearLayout>

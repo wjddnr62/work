@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/custom_toolbar"
+        android:id="@+id/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="70dp"
+            android:layout_below="@id/toolbar">
+
+            <TextView
+                style="@style/signTextView"
+                android:text="2. 사업체 정보 입력"
+                android:layout_marginBottom="5dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/mainColor"
+                android:layout_marginBottom="5dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:checked="true"
+                        android:id="@+id/personal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="개인사업자"
+                        android:textSize="14dp"
+                        android:layout_weight="1"/>
+                    <RadioButton
+                        android:id="@+id/corporation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="법인사업자"
+                        android:textSize="14dp"
+                        android:layout_weight="1"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <TextView
+                style="@style/signTextView"
+                android:text="사업자 등록번호"
+                android:layout_marginBottom="5dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                android:layout_marginBottom="5dp">
+                <EditText
+                    android:id="@+id/buisness_num1"
+                    style="@style/signEditText"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"/>
+                <EditText
+                    android:id="@+id/buisness_num2"
+                    style="@style/signEditText"
+                    android:layout_weight="1.1"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"/>
+                <EditText
+                    android:id="@+id/buisness_num3"
+                    style="@style/signEditText"
+                    android:layout_weight=".8"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"/>
+                <TextView
+                    style="@style/signTextView"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1.1"
+                    android:background="@color/mainColor"
+                    android:gravity="center"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:text="조회"
+                    android:textColor="#fff" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <TextView
+                        style="@style/signTextView"
+                        android:text="사업자 명"
+                        android:layout_marginBottom="5dp"/>
+                    <EditText
+                        android:id="@+id/buisness_man_name"
+                        style="@style/signEditText"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp">
+                    <TextView
+                        style="@style/signTextView"
+                        android:text="상호명"
+                        android:layout_marginBottom="5dp"/>
+                    <EditText
+                        android:id="@+id/buisness_name"
+                        style="@style/signEditText"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="10dp">
+                    <TextView
+                        style="@style/signTextView"
+                        android:text="담당자"
+                        android:layout_marginBottom="5dp"/>
+                    <EditText
+                        android:id="@+id/manager_name"
+                        style="@style/signEditText"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <TextView
+                style="@style/signTextView"
+                android:text="사업장 소재지"
+                android:layout_marginBottom="5dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="5dp">
+                <EditText
+                    android:id="@+id/buisness_location"
+                    style="@style/signEditText"
+                    android:layout_weight=".5" />
+                <TextView
+                    style="@style/signTextView"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight=".9"
+                    android:background="@color/mainColor"
+                    android:gravity="center"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="8dp"
+                    android:text="주소검색"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#fff" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <TextView
+                style="@style/signTextView"
+                android:text="업체 소개"
+                android:layout_marginBottom="5dp"/>
+
+            <EditText
+                android:id="@+id/buisness_info"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/edit_text_gray_border_white_background"
+                android:padding="10dp"
+                android:layout_marginBottom="20dp"
+                android:inputType="none"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/mainColor"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/mainColor">
+
+        <TextView
+            android:onClick="backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="이전 단계"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:onClick="signOk"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="가입 완료"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

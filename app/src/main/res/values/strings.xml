@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Work</string>
+    
+    <string-array name="career">
+        <item>1년</item>
+        <item>2년</item>
+        <item>3년</item>
+        <item>4년</item>
+        <item>5년</item>
+        <item>5년 이상</item>
+        <item>10년 이상</item>
+    </string-array>
+
+    <string-array name="proficiency">
+        <item>상</item>
+        <item>중</item>
+        <item>하</item>
+    </string-array>
+    <string name="pic">
+        사진 등록\n* 현장 사진은 최대 3장까지 등록 가능합니다.
+    </string>
+</resources>

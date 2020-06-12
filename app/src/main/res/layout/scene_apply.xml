@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/custom_toolbar"
+        android:id="@+id/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:id="@+id/title_form">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="이름"
+            android:layout_weight="0.9"
+            android:textSize="15dp"
+            android:textColor="@color/mainColor"
+            android:textStyle="bold" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="50dp"
+            android:background="#000"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="폰번호"
+            android:layout_weight="0.6"
+            android:textSize="15dp"
+            android:textColor="@color/mainColor"
+            android:textStyle="bold" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="50dp"
+            android:background="#000"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="작업"
+            android:layout_weight="0.9"
+            android:textSize="15dp"
+            android:textColor="@color/mainColor"
+            android:textStyle="bold" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="50dp"
+            android:background="#000"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="경력"
+            android:layout_weight="0.95"
+            android:textSize="15dp"
+            android:textColor="@color/mainColor"
+            android:textStyle="bold" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="50dp"
+            android:background="#000"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="승인"
+            android:layout_weight="0.95"
+            android:textSize="15dp"
+            android:textColor="@color/mainColor"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000"
+        android:layout_below="@id/title_form"
+        android:id="@+id/line1"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listview_apply"
+        android:layout_below="@id/line1"></ListView>
+
+</RelativeLayout>

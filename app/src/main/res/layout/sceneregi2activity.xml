@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <include layout="@layout/custom_toolbar"
+        android:id="@+id/toolbar"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_below="@id/toolbar">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/real_form1"
+        android:layout_marginTop="20dp"
+        >
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="사진"
+            android:gravity="center"
+            android:id="@+id/img"
+            android:background="@drawable/line_view"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이 름 : "
+            android:layout_toRightOf="@id/img"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/name_form"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/name_form"
+            android:text="이름"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:id="@+id/user_name" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="전 화 : "
+            android:layout_toRightOf="@id/img"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/tel_form"
+            android:layout_below="@id/name_form"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/tel_form"
+            android:text="010-0000-0000"
+            android:layout_below="@id/user_name"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:id="@+id/user_tel"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="주 소 : "
+            android:layout_toRightOf="@id/img"
+            android:layout_below="@id/tel_form"
+            android:layout_marginLeft="20dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:id="@+id/address_form"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/address_form"
+            android:layout_below="@id/user_tel"
+            android:text="서울 시 강남구 서총동 12 댜륭빌딩 102호"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:id="@+id/user_address"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/real_form2"
+        android:layout_below="@id/real_form1"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text1"
+            android:text="1. 작업 내용"
+            android:textSize="16dp"
+            android:textStyle="bold"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/text1"
+            android:id="@+id/spinner1"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/line_view"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text2"
+            android:text="2. 기타사항"
+            android:layout_below="@id/spinner1"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/text2"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/line_view"
+            android:ems="100"
+            android:gravity="top|left"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:maxWidth="5.0dip"
+            android:minWidth="10.0dip"
+            android:scrollHorizontally="false"
+            android:padding="5dp"
+            android:id="@+id/etc_text"
+            android:hint="100자 이내 작성"
+            android:maxLength="100"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text3"
+            android:layout_below="@id/etc_text"
+            android:text="3. 평점"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:layout_marginTop="10dp"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/text3"
+            android:id="@+id/spinner2"
+            android:background="@drawable/line_view"
+            android:layout_marginTop="5dp"/>
+    </RelativeLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:id="@+id/finish"
+            android:layout_below="@id/real_form2"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/line_view"
+            android:text="완료"
+            android:textSize="16dp"
+            android:layout_marginTop="20dp"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

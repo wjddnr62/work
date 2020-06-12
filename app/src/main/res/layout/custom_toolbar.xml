@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/mainColor"
+    android:minHeight="?attr/actionBarSize"
+    app:theme="@style/Theme.AppCompat.NoActionBar">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="로그아웃"
+        android:textSize="12dp"
+        android:textColor="#fff"
+        android:id="@+id/logout"
+        android:visibility="gone"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="일하다"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:textColor="#fff"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="신청확인"
+        android:layout_gravity="right"
+        android:textSize="12dp"
+        android:textColor="#fff"
+        android:id="@+id/apply_check"
+        android:layout_marginRight="15dp"
+        android:visibility="gone"/>
+</android.support.v7.widget.Toolbar>
